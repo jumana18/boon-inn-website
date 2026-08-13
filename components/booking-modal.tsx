@@ -128,24 +128,27 @@ export function BookingModal({ isOpen, onClose, initialRoom = 'Family Suite Room
                   <label className="mb-1.5 flex items-center gap-2 font-sans text-xs uppercase tracking-wider text-cream/80">
                     <BedDouble className="h-3.5 w-3.5 text-brass" /> Select Room Category
                   </label>
-                  <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-3">
+                  <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
                     {[
                       { name: 'Family Suite Room', rate: 'from ₹5,600/night' },
                       { name: 'Superior Room – Twin', rate: 'from ₹1,700/night' },
                       { name: 'Superior Room – Double', rate: 'Best Available Rate' },
+                      { name: 'Suite Room', rate: 'Best Available Rate' },
+                      { name: 'Deluxe Room', rate: 'Best Available Rate' },
+                      { name: 'Standard Room', rate: 'Best Available Rate' },
                     ].map((room) => (
                       <button
                         type="button"
                         key={room.name}
                         onClick={() => setSelectedRoom(room.name)}
-                        className={`flex flex-col items-start justify-between rounded-lg border p-3 text-left transition-all ${
+                        className={`flex flex-col items-start justify-between rounded-lg border p-2.5 text-left transition-all ${
                           selectedRoom === room.name
                             ? 'border-brass bg-brass/15 text-cream ring-1 ring-brass'
                             : 'border-cream/15 bg-white/5 text-cream/80 hover:border-cream/40'
                         }`}
                       >
-                        <span className="font-sans text-xs font-semibold text-cream">{room.name}</span>
-                        <span className="mt-1 font-sans text-[11px] text-brass">{room.rate}</span>
+                        <span className="font-sans text-xs font-semibold text-cream leading-tight">{room.name}</span>
+                        <span className="mt-1 font-sans text-[10px] text-brass">{room.rate}</span>
                       </button>
                     ))}
                   </div>

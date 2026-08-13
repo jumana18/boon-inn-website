@@ -19,10 +19,9 @@ export function BookingCta({ onOpenBooking }: { onOpenBooking?: () => void }) {
         transition={{ duration: 1.6, ease: EASE }}
       >
         <motion.img
-          src="/images/cta.png"
-          alt="Boon Inn Kottakkal welcoming atmosphere"
+          src="/images/boon-inn/hotel-front.jpg"
+          alt="Boon Inn Kottakkal entrance and welcoming facade"
           aria-hidden
-          crossOrigin="anonymous"
           className="h-full w-full object-cover"
           style={{ willChange: 'transform' }}
           animate={reduced ? undefined : { x: ['-2%', '2%'] }}

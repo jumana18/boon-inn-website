@@ -20,25 +20,49 @@ const ROOMS: Room[] = [
     name: 'Family Suite Room',
     price: 'from ₹5,600 / night',
     size: 'Spacious Suite · Ideal for Families',
-    description: 'Our most expansive accommodation, offering generous living space, plush bedding, air conditioning, and premium amenities tailored for families and extended stays.',
-    image: '/images/room-suite.png',
-    alt: 'Family Suite Room at Boon Inn Kottakkal with spacious layout and warm lighting',
+    description: 'Our premier accommodation, offering generous living space, plush bedding, individual air conditioning, and refined amenities tailored for families and extended stays.',
+    image: '/images/boon-inn/family-suite.jpg',
+    alt: 'Authentic Family Suite Room at Boon Inn Kottakkal with spacious layout and warm lighting',
   },
   {
     name: 'Superior Room – Twin',
     price: 'from ₹1,700 / night',
     size: 'Twin Beds · Air Conditioned',
-    description: 'A comfortable, well-appointed room featuring twin beds, climate control, high-speed Wi-Fi, and a modern ensuite bathroom — ideal for friends and business travellers.',
-    image: '/images/room-garden.png',
-    alt: 'Superior Twin Room at Boon Inn Kottakkal featuring two comfortable single beds',
+    description: 'A comfortable, well-appointed room featuring twin beds, climate control, high-speed Wi-Fi, work desk, and a modern ensuite bathroom — ideal for friends and business travellers.',
+    image: '/images/boon-inn/superior-twin.jpg',
+    alt: 'Authentic Superior Twin Room at Boon Inn Kottakkal featuring two comfortable single beds',
   },
   {
     name: 'Superior Room – Double',
     price: 'Best Available Rate',
     size: 'Double Bed · Air Conditioned',
     description: 'An inviting haven with a plush double bed, fine linens, air conditioning, and tranquil ambiance for solo travelers or couples visiting Kottakkal.',
-    image: '/images/room-deluxe.png',
-    alt: 'Superior Double Room at Boon Inn Kottakkal featuring a comfortable double bed',
+    image: '/images/boon-inn/superior-double.jpg',
+    alt: 'Authentic Superior Double Room at Boon Inn Kottakkal featuring a comfortable double bed',
+  },
+  {
+    name: 'Suite Room',
+    price: 'Best Available Rate',
+    size: 'Executive Suite · Dedicated Lounge',
+    description: 'An elegant suite featuring separate living and sleeping areas, thoughtful interior touches, climate control, and dedicated room service.',
+    image: '/images/boon-inn/suite-room.jpg',
+    alt: 'Authentic Suite Room at Boon Inn Kottakkal with executive living and sleeping area',
+  },
+  {
+    name: 'Deluxe Room',
+    price: 'Best Available Rate',
+    size: 'Double Bed · Work Area',
+    description: 'A stylish and restful deluxe room with modern wooden furnishings, air conditioning, premium linen, and complimentary Wi-Fi.',
+    image: '/images/boon-inn/deluxe-room.jpg',
+    alt: 'Authentic Deluxe Room at Boon Inn Kottakkal with wooden furnishings and warm ambiance',
+  },
+  {
+    name: 'Standard Room',
+    price: 'Best Available Rate',
+    size: 'Comfort Bed · Essential Amenities',
+    description: 'A cozy, clean, and value-packed room equipped with air conditioning, television, ensuite bath, and prompt 24-hour room service.',
+    image: '/images/boon-inn/standard-room.jpg',
+    alt: 'Authentic Standard Room at Boon Inn Kottakkal with comfortable bedding and essential amenities',
   },
 ]
 
@@ -53,11 +77,11 @@ function RoomCard({
 }) {
   return (
     <motion.article
-      className={cn('group', index === 1 && 'lg:mt-16')}
+      className={cn('group')}
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-10% 0px' }}
-      transition={{ duration: 0.9, ease: EASE, delay: index * 0.1 }}
+      transition={{ duration: 0.9, ease: EASE, delay: (index % 3) * 0.1 }}
     >
       <div
         role="button"
@@ -77,14 +101,13 @@ function RoomCard({
           whileHover={{ y: -6 }}
           transition={{ duration: 0.5, ease: EASE }}
         >
-          <div className="aspect-[3/4] w-full overflow-hidden">
+          <div className="aspect-[4/3] w-full overflow-hidden bg-pine-deep/10">
             <img
-              src={room.image || '/placeholder.svg'}
+              src={room.image}
               alt={room.alt}
               loading="lazy"
               decoding="async"
-              crossOrigin="anonymous"
-              className="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-110"
+              className="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-108"
             />
           </div>
 

@@ -11,12 +11,12 @@ import { cn } from '@/lib/utils'
 type Shot = { src: string; title: string; span: string }
 
 const SHOTS: Shot[] = [
-  { src: '/images/gallery-4.png', title: 'Hotel Architecture & Exterior', span: 'lg:col-span-7 lg:row-span-2' },
-  { src: '/images/gallery-1.png', title: 'Breakfast & Dining Table', span: 'lg:col-span-5' },
-  { src: '/images/gallery-2.png', title: 'Warm Lounge & Interiors', span: 'lg:col-span-5' },
-  { src: '/images/gallery-5.png', title: 'Restaurant Dining Space', span: 'lg:col-span-5' },
-  { src: '/images/gallery-3.png', title: 'Welcoming Corridor', span: 'lg:col-span-3' },
-  { src: '/images/gallery-6.png', title: 'Hospitality & Room Details', span: 'lg:col-span-4' },
+  { src: '/images/boon-inn/gallery-facade.jpg', title: 'Hotel Architecture & Exterior', span: 'lg:col-span-7 lg:row-span-2' },
+  { src: '/images/boon-inn/gallery-lobby-1.jpg', title: 'Lobby & Reception Lounge', span: 'lg:col-span-5' },
+  { src: '/images/boon-inn/gallery-dining-1.jpg', title: 'Multi-Cuisine Restaurant', span: 'lg:col-span-5' },
+  { src: '/images/boon-inn/gallery-suite-living.jpg', title: 'Family Suite Living Area', span: 'lg:col-span-5' },
+  { src: '/images/boon-inn/conference-hall.jpg', title: 'Conference & Banquet Facilities', span: 'lg:col-span-3' },
+  { src: '/images/boon-inn/gallery-twin-interior.jpg', title: 'Superior Room Interior', span: 'lg:col-span-4' },
 ]
 
 export function Gallery() {
@@ -67,7 +67,7 @@ export function Gallery() {
           </div>
           <FadeIn delay={1} className="max-w-xs">
             <p className="font-sans text-sm leading-relaxed text-muted-foreground">
-              Tap any image to view in full detail. Designed for comfort, calm, and memorable stays.
+              Tap any image to view in full detail. Authentic photographs of Boon Inn Kottakkal.
             </p>
           </FadeIn>
         </div>
@@ -79,19 +79,18 @@ export function Gallery() {
               key={shot.src}
               onClick={() => setIndex(i)}
               data-cursor="view"
-              className={cn('group relative overflow-hidden rounded-sm', shot.span)}
+              className={cn('group relative overflow-hidden rounded-sm bg-pine-deep/10', shot.span)}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-8% 0px' }}
               transition={{ duration: 0.8, ease: EASE, delay: (i % 3) * 0.08 }}
             >
               <img
-                src={shot.src || '/placeholder.svg'}
+                src={shot.src}
                 alt={shot.title}
                 loading="lazy"
                 decoding="async"
-                crossOrigin="anonymous"
-                className="h-full w-full object-cover transition-transform duration-[1100ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-110"
+                className="h-full w-full object-cover transition-transform duration-[1100ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-108"
               />
               <div className="absolute inset-0 bg-pine-deep/40 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               <span className="absolute bottom-4 left-4 translate-y-2 font-serif text-lg text-cream opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
@@ -162,9 +161,8 @@ export function Gallery() {
                 }}
               >
                 <img
-                  src={SHOTS[index].src || '/placeholder.svg'}
+                  src={SHOTS[index].src}
                   alt={SHOTS[index].title}
-                  crossOrigin="anonymous"
                   className="max-h-[78vh] w-auto rounded-sm object-contain"
                   draggable={false}
                 />

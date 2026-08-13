@@ -35,11 +35,10 @@ export function Location() {
       <section className="relative h-[45vh] min-h-[320px] w-full overflow-hidden">
         <Parallax amount={70} className="h-full w-full">
           <img
-            src="/images/cta.png"
-            alt="Boon Inn Kottakkal exterior illuminated at dusk"
+            src="/images/boon-inn/kottakkal-heritage.jpg"
+            alt="Scenic Kottakkal surroundings and heritage of the city of Ayurveda"
             loading="lazy"
             decoding="async"
-            crossOrigin="anonymous"
             className="h-[120%] w-full object-cover"
           />
         </Parallax>

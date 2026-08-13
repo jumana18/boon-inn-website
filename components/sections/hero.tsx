@@ -32,8 +32,8 @@ export function Hero({ start, onOpenBooking }: { start: boolean; onOpenBooking?:
         transition={{ duration: 1.4, ease: EASE }}
       >
         <motion.img
-          src="/images/hero.png"
-          alt="Boon Inn Kottakkal illuminated at dusk with warm, inviting architecture"
+          src="/images/boon-inn/hero-exterior.jpg"
+          alt="Official exterior view of Boon Inn Kottakkal hotel on NH-17 Parambilangadi"
           crossOrigin="anonymous"
           className="h-full w-full object-cover"
           style={{ willChange: 'transform' }}

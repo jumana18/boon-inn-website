@@ -43,8 +43,8 @@ export function Intro() {
             {/* Image overlaps toward the text column on large screens */}
             <Parallax amount={50} className="rounded-sm lg:-ml-10">
               <ImageReveal
-                src="/images/about.png"
-                alt="Comfortable and welcoming ambience at Boon Inn Kottakkal with soft ambient lighting"
+                src="/images/boon-inn/lobby-lounge.jpg"
+                alt="Authentic lobby lounge and reception seating at Boon Inn Kottakkal"
                 direction="right"
                 className="aspect-[4/5] w-full rounded-sm"
                 imgClassName="scale-110"
