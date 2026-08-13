@@ -16,10 +16,27 @@ const geist = Geist({
 })
 
 export const metadata: Metadata = {
-  title: 'Boon Inn — A Boutique Retreat',
+  title: 'Boon Inn Kottakkal — Premium Hotel & Stays in the City of Ayurveda, Kerala',
   description:
-    'Boon Inn is a boutique hotel where quiet luxury meets warm hospitality. Discover elegant rooms, thoughtful facilities, and a stay that feels like coming home.',
-  generator: 'v0.app',
+    'Experience refined comfort and authentic Kerala hospitality at Boon Inn Kottakkal. Located on NH-17, Parambilangadi, near Arya Vaidya Sala with suite & superior rooms, restaurant, and modern amenities.',
+  keywords: [
+    'Boon Inn Kottakkal',
+    'Hotel in Kottakkal',
+    'Kottakkal Kerala Hotel',
+    'Arya Vaidya Sala accommodation',
+    'NH-17 Parambilangadi hotel',
+    'Malappuram hotel',
+    'Kerala boutique stays',
+  ],
+  openGraph: {
+    title: 'Boon Inn Kottakkal — Premium Hotel in the City of Ayurveda, Kerala',
+    description:
+      'Warm hospitality, refined comfort, and peaceful rooms on NH-17, Parambilangadi, Kottakkal, Kerala.',
+    url: 'https://booninn.com',
+    siteName: 'Boon Inn Kottakkal',
+    locale: 'en_IN',
+    type: 'website',
+  },
 }
 
 export const viewport: Viewport = {

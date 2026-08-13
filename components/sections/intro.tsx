@@ -14,26 +14,27 @@ export function Intro() {
             <FadeIn className="mb-7 flex items-center gap-3">
               <span className="h-px w-10 bg-brass" />
               <span className="font-sans text-xs uppercase tracking-[0.3em] text-muted-foreground">
-                The Boon Inn Philosophy
+                Hospitality in Kottakkal
               </span>
             </FadeIn>
 
             <RevealText
               as="h2"
               className="font-serif text-4xl font-light leading-[1.05] text-foreground text-balance md:text-6xl"
-              lines={['A small hotel', 'with a generous', 'sense of welcome.']}
+              lines={['A welcoming stay', 'in the city of', 'Ayurveda.']}
             />
 
             <FadeIn delay={1} className="mt-8 max-w-md">
               <p className="font-sans text-base leading-relaxed text-muted-foreground">
-                We built Boon Inn around a simple idea: that a place to stay should feel
-                personal. Twenty-four rooms, a handful of quiet corners, and a team that
-                remembers your name. No sprawling lobbies — just considered spaces and
-                warm light.
+                Conveniently located along NH-17 at Parambilangadi, Kottakkal, Boon Inn
+                blends contemporary hospitality with the sincere warmth of Kerala tradition.
+                Whether you are visiting for Ayurvedic healing at the historic Arya Vaidya Sala,
+                traveling with family, or on a professional trip through Malappuram, our hotel
+                is designed to make your journey calm and comfortable.
               </p>
               <p className="mt-5 font-sans text-base leading-relaxed text-muted-foreground">
-                Every detail, from the linen to the morning coffee, is chosen to make
-                slowing down feel effortless.
+                Enjoy air-conditioned rooms, multi-cuisine dining, complimentary Wi-Fi,
+                generous parking, and a dedicated 24-hour team always ready to assist.
               </p>
             </FadeIn>
           </div>
@@ -43,7 +44,7 @@ export function Intro() {
             <Parallax amount={50} className="rounded-sm lg:-ml-10">
               <ImageReveal
                 src="/images/about.png"
-                alt="The warm, plant-filled lounge at Boon Inn with a fireplace and soft evening light"
+                alt="Comfortable and welcoming ambience at Boon Inn Kottakkal with soft ambient lighting"
                 direction="right"
                 className="aspect-[4/5] w-full rounded-sm"
                 imgClassName="scale-110"

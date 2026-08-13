@@ -11,12 +11,12 @@ import { cn } from '@/lib/utils'
 type Shot = { src: string; title: string; span: string }
 
 const SHOTS: Shot[] = [
-  { src: '/images/gallery-4.png', title: 'Rooftop at sunset', span: 'lg:col-span-7 lg:row-span-2' },
-  { src: '/images/gallery-1.png', title: 'Morning table', span: 'lg:col-span-5' },
-  { src: '/images/gallery-2.png', title: 'The spa', span: 'lg:col-span-5' },
-  { src: '/images/gallery-5.png', title: 'The restaurant', span: 'lg:col-span-5' },
-  { src: '/images/gallery-3.png', title: 'Arched corridor', span: 'lg:col-span-3' },
-  { src: '/images/gallery-6.png', title: 'In the details', span: 'lg:col-span-4' },
+  { src: '/images/gallery-4.png', title: 'Hotel Architecture & Exterior', span: 'lg:col-span-7 lg:row-span-2' },
+  { src: '/images/gallery-1.png', title: 'Breakfast & Dining Table', span: 'lg:col-span-5' },
+  { src: '/images/gallery-2.png', title: 'Warm Lounge & Interiors', span: 'lg:col-span-5' },
+  { src: '/images/gallery-5.png', title: 'Restaurant Dining Space', span: 'lg:col-span-5' },
+  { src: '/images/gallery-3.png', title: 'Welcoming Corridor', span: 'lg:col-span-3' },
+  { src: '/images/gallery-6.png', title: 'Hospitality & Room Details', span: 'lg:col-span-4' },
 ]
 
 export function Gallery() {
@@ -56,19 +56,18 @@ export function Gallery() {
             <FadeIn className="mb-6 flex items-center gap-3">
               <span className="h-px w-10 bg-brass" />
               <span className="font-sans text-xs uppercase tracking-[0.3em] text-muted-foreground">
-                Gallery
+                Visual Tour
               </span>
             </FadeIn>
             <RevealText
               as="h2"
               className="font-serif text-4xl font-light leading-[1.05] text-foreground text-balance md:text-6xl"
-              lines={['A look around', 'the place.']}
+              lines={['A glimpse inside', 'Boon Inn Kottakkal.']}
             />
           </div>
           <FadeIn delay={1} className="max-w-xs">
             <p className="font-sans text-sm leading-relaxed text-muted-foreground">
-              Tap any image to explore it full-screen. Use your arrow keys or swipe to
-              move through the collection.
+              Tap any image to view in full detail. Designed for comfort, calm, and memorable stays.
             </p>
           </FadeIn>
         </div>

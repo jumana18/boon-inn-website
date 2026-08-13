@@ -1,18 +1,52 @@
 'use client'
 
 import { motion } from 'motion/react'
-import { Utensils, Flower2, Sunset, BellRing, Wifi, Compass } from 'lucide-react'
+import { Wifi, Wind, Car, Utensils, BellRing, Coffee, Clock, Users } from 'lucide-react'
 import { RevealText } from '@/components/motion/reveal-text'
 import { FadeIn } from '@/components/motion/fade-in'
 import { EASE } from '@/lib/motion'
 
 const FACILITIES = [
-  { icon: Utensils, title: 'Restaurant & Bar', text: 'Seasonal small plates and slow cocktails in an intimate candlelit room.' },
-  { icon: Flower2, title: 'Spa & Wellness', text: 'Stone soaking tubs, treatments and a quiet space to unwind completely.' },
-  { icon: Sunset, title: 'Rooftop Terrace', text: 'Lounge seating and string lights for golden-hour drinks above the trees.' },
-  { icon: BellRing, title: '24/7 Concierge', text: 'A real person, any hour — for reservations, directions or a late arrival.' },
-  { icon: Wifi, title: 'Fast Wi-Fi', text: 'Reliable connectivity throughout, for the days you can’t fully switch off.' },
-  { icon: Compass, title: 'Curated Experiences', text: 'Hand-picked walks, markets and hidden spots, arranged just for you.' },
+  {
+    icon: Wifi,
+    title: 'Free Wi-Fi',
+    text: 'High-speed wireless internet accessible seamlessly throughout all guest rooms and public areas.',
+  },
+  {
+    icon: Wind,
+    title: 'Air Conditioning',
+    text: 'Individually controlled cooling in all rooms, keeping your environment comfortably relaxed.',
+  },
+  {
+    icon: Car,
+    title: 'Free Parking',
+    text: 'Spacious on-site parking facilities available free of charge for all staying guests.',
+  },
+  {
+    icon: Utensils,
+    title: 'Restaurant',
+    text: 'Multi-cuisine dining offering authentic Kerala delicacies alongside popular Indian favourites.',
+  },
+  {
+    icon: BellRing,
+    title: 'Room Service',
+    text: 'Prompt in-room dining delivering fresh dishes and beverages directly to your comfort.',
+  },
+  {
+    icon: Coffee,
+    title: 'Breakfast',
+    text: 'Fresh morning breakfast served daily to energise your day exploring Kottakkal.',
+  },
+  {
+    icon: Clock,
+    title: '24-Hour Front Desk',
+    text: 'Continuous reception and guest assistance for seamless check-ins, departures, and queries.',
+  },
+  {
+    icon: Users,
+    title: 'Meeting & Event Facilities',
+    text: 'Well-appointed spaces suitable for corporate meetings, conferences, and intimate gatherings.',
+  },
 ]
 
 export function Facilities() {
@@ -23,22 +57,22 @@ export function Facilities() {
           <FadeIn className="mb-6 flex items-center gap-3">
             <span className="h-px w-10 bg-brass" />
             <span className="font-sans text-xs uppercase tracking-[0.3em] text-cream/60">
-              Facilities
+              Hotel Amenities
             </span>
           </FadeIn>
           <RevealText
             as="h2"
             className="font-serif text-4xl font-light leading-[1.05] text-balance md:text-6xl"
-            lines={['Everything you need,', 'nothing you don’t.']}
+            lines={['Verified facilities', 'for a restful stay.']}
           />
         </div>
 
         <motion.div
-          className="grid grid-cols-1 gap-px overflow-hidden rounded-sm border border-cream/15 bg-cream/10 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-px overflow-hidden rounded-sm border border-cream/15 bg-cream/10 sm:grid-cols-2 lg:grid-cols-4"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-10% 0px' }}
-          variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
+          variants={{ visible: { transition: { staggerChildren: 0.08 } } }}
         >
           {FACILITIES.map((f) => {
             const Icon = f.icon
@@ -46,17 +80,17 @@ export function Facilities() {
               <motion.div
                 key={f.title}
                 data-cursor="link"
-                className="group bg-pine p-8 transition-colors duration-500 hover:bg-pine-deep md:p-10"
+                className="group bg-pine p-7 transition-colors duration-500 hover:bg-pine-deep lg:p-8"
                 variants={{
                   hidden: { opacity: 0, y: 30 },
                   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
                 }}
               >
-                <span className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-full border border-brass/40 text-brass transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+                <span className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full border border-brass/40 text-brass transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
                   <Icon className="h-5 w-5" />
                 </span>
-                <h3 className="font-serif text-2xl font-light">{f.title}</h3>
-                <p className="mt-3 font-sans text-sm leading-relaxed text-cream/70">{f.text}</p>
+                <h3 className="font-serif text-xl font-light">{f.title}</h3>
+                <p className="mt-2.5 font-sans text-xs leading-relaxed text-cream/70 md:text-sm">{f.text}</p>
               </motion.div>
             )
           })}

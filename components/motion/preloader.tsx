@@ -55,7 +55,7 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="mt-4 font-sans text-xs uppercase tracking-[0.35em] text-cream/70"
             >
-              A Boutique Retreat
+              Kottakkal · Kerala
             </motion.p>
           </motion.div>
         </motion.div>
